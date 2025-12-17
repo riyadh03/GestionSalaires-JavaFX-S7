@@ -1,34 +1,38 @@
-# GestionSalaires-JavaFX-S7
-GestionSalaires-JavaFX est une application de gestion des employés développée en Java avec JavaFX. Elle permet de :
+# 💼 GestionSalaires-JavaFX-S7
 
-Ajouter, modifier et supprimer des employés de différents types (Vendeur, Représentant, Producteur, Manutentionnaire).
+**GestionSalaires-JavaFX** est une application de bureau robuste permettant de gérer les ressources humaines d'une entreprise. Elle automatise le calcul des salaires selon le type d'employé et assure la persistance des données via une base de données MySQL.
 
-Calculer et afficher le salaire moyen des employés.
+---
 
-Afficher la liste complète des employés dans un TableView.
+## 🚀 Fonctionnalités
 
-Gérer les employés avec ou sans risque (Produit dangereux).
+- **Gestion CRUD complète** : Ajouter, modifier et supprimer des employés.
+- **Typologie d'employés** : Gestion spécifique pour les *Vendeurs*, *Représentants*, *Producteurs* et *Manutentionnaires*.
+- **Calcul automatisé** : Calcul des salaires en fonction des performances (chiffre d'affaires ou unités produites) et des primes de risque.
+- **Interface intuitive** : Interface graphique moderne conçue avec **JavaFX** et **Scene Builder**.
+- **Statistiques** : Affichage en temps réel du salaire moyen de l'entreprise.
+- **Persistance** : Connexion JDBC avec MySQL pour sauvegarder les données.
 
-Interface FXML construite avec Scene Builder et connectée à un Controller pour la logique métier.
+---
 
-Technologies :
+## 🛠️ Technologies utilisées
 
-Java 11+
+* **Langage** : Java 11+
+* **Interface Graphique** : JavaFX (FXML)
+* **Base de données** : MySQL 8.0
+* **Design** : Scene Builder
+* **Gestionnaire de dépendances** : Maven (ou Gradle)
 
-JavaFX (Controls + FXML)
+---
 
-MySQL pour la persistance des données
+## 📂 Architecture du projet
 
-Maven ou Gradle (optionnel) pour la gestion des dépendances
+Le projet suit une architecture structurée pour séparer la logique métier de l'interface :
 
-Arborescence du projet :
-
+```text
 src/
- ├─ application/   -> Main.java
- ├─ controller/    -> Controller.java
- ├─ db/            -> DBConnection.java, GestionEmployeDB.java
- ├─ model/         -> Employe.java, Vendeur.java, etc.
- └─ view/          -> interface.fxml
-
-
-Si tu veux, je peux aussi te préparer un README complet prêt à coller sur GitHub, avec instructions pour compiler et lancer l’application, et même comment configurer JavaFX.
+ ├─ application/   # Point d'entrée de l'application (Main.java)
+ ├─ controller/    # Logique de contrôle entre la View et le Model
+ ├─ db/            # Gestion de la connexion et requêtes SQL (DAO)
+ ├─ model/         # Classes métiers (Héritage et Polymorphisme)
+ └─ view/          # Fichiers FXML et feuilles de style CSS
